@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>设备维修管理系统</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fixInfo.css">
+    <link rel="stylesheet" type="text/css" href="css/confirm-list.css">
+    <link rel="stylesheet" type="text/css" href="css/nullWarn.css">
+    <script type="text/javascript">
+
+    </script>
+    <style type="text/css">
+        .content .body
+        {
+            width: 100%;
+            height: auto;
+        }
+        .list-block
+        {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .list-title
+        {
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.4em;
+            color: white;
+            padding: 20px;
+        }
+        .list-info
+        {
+            text-align: center;
+            font-weight: 300;
+            font-size: 1.0em;
+            color: white;   
+            padding-bottom: 20px;         
+        }
+        .info-num
+        {
+            padding: 3px 6px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .city-list
+        {
+            width: 30%;
+            float: left;
+            margin-top: 50px;
+            margin-left: 15%;
+            margin-right: 5%;
+            background-color: RGB(61, 184, 235);
+            box-shadow: RGB(61, 184, 235) 0px 0px 10px;
+        }
+        .city-list .info-num
+        {
+            color: RGB(61, 184, 235);
+        }
+        .activity-list
+        {
+            background-color: RGB(255, 93, 92);
+            float: left;
+            width: 30%;
+            margin-left: 5%;
+            margin-right: 15%;
+            margin-top: 50px;
+            box-shadow: RGB(255, 93, 92) 0px 0px 10px;
+        }
+        .activity-list .info-num
+        {
+            color: RGB(255, 93, 92);
+        }
+    </style>
+</head>
+<body>
+    <div id="left-bar" class="left-bar">
+        <img class="menu-icon" src="images/menu.png">
+        <div class="item-list">
+            <div id="item1" class="item item-on" onclick="location.href='welcome.html'">主页</div>
+            <div id="item2" class="item" onclick="location.href='city.html'">城市管理</div>
+            <div id="item3" class="item auth" onclick="location.href='activity.html'">活动管理</div>
+            <!-- <div id="item4" class="item" onclick="location.href='countmanagement.html'">分类</div> -->
+            <!-- <div id="item5" class="item auth" onclick="location.href='devicemanagement.html'">备件管理</div> -->
+            <!-- <div id="item6" class="item" onclick="">运营监督管理</div> -->
+        </div>
+    </div>
+    <div id="content" class="content">
+        <div class="head">
+            <div class="head-title">
+                <div>
+                    有趣后台管理
+                </div>
+            </div>
+            <div class="log-info-box">
+            	<div class="log-info-text">
+            		Hi,user<span class="down"></span>
+            		<div class="triangle">
+            		</div>
+            	</div>
+            </div>
+            <div class="info-menu">
+            	<div class="info-menu-top">
+            		<div class="info-menu-line">
+                        <div>
+                            <img class="info-img" src="images/github.png">
+                            <p class="info-name">username</p>
+                        </div>
+            		</div>
+            	</div>
+            	<div class="info-menu-middle">
+                    <div class="info-menu-line">
+                        <p class="info-sign"> "代码如诗"
+                        </p>
+                    </div>
+            	</div>
+            	<div class="info-menu-bottom">
+                    <div class="info-menu-line">
+                        <div class="info-btn">Logout
+                        </div>
+                    </div>
+            	</div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="list-block city-list">
+                <div class="list-title">
+                    <p>城市</p>
+                </div>
+                <div class="list-info">
+                    <p>共计<span class="info-num">5</span>个城市</p>
+                </div>
+            </div>
+            <div class="list-block activity-list">
+                <div class="list-title">
+                    <p>活动</p>
+                </div>
+                <div class="list-info">
+                    <p>共计<span class="info-num">5</span>个活动</p>
+                </div>
+            </div>
+
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="js/jquery-3.0.0.js"></script>
+<script src="js/mouseClick.js"></script>
+<script src="js/checkNull.js"></script>
+<script type="text/javascript" src="js/getValue.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/ajaxSubmit.js"></script>
+
+<SCRIPT TYPE="text/javascript">
+    $("#fix").click(function()
+    {
+        var ifnull = submitCheck(this);
+        if (ifnull == 1) 
+        {
+            var x=getValue($(this));
+            ajaxSubmit(fixUrl,fixMethod,x,"fixCustomerData");
+            
+        };
+    });
+    $("#add").click(function()
+    {
+        var ifnull = submitCheck(this);
+        if (ifnull > 0) 
+        {
+            var x=getValue($(this));
+            ajaxSubmit(addUrl,addMethod,x,"addCustomerData"); 
+        };
+        var n=$(this).parent().find("input").length;
+        for (var i = 0; i < n; i++) {
+            if ($(this).parent().find("input")[i].type!="radio") {
+                $(this).parent().find("input")[i].value="";
+
+            };
+        };
+        var radio = document.getElementsByName("clientType");  
+        for (i=0; i<radio.length; i++) {  
+                radio[i].checked=false;   
+        }
+    });
+    function ajaxDelete()
+    {
+        var obj = objectRemove();
+        ajaxSubmit(deleteUrl,deleteMethod,'submitType=delete&clientId='+obj.parentNode.parentNode.getElementsByTagName("td")[0].innerHTML);
+    }
+    function showInfo(obj)
+    {
+        showFixInfo();
+        ajaxSubmit(showUrl,showMethod,"id="+obj.id,'showInfo');
+    }
+    function editInfo(obj)
+    {
+        showFixRecord(obj);
+        ajaxSubmit(showUrl,showMethod,obj.id,'showEditInfo');
+
+    }
+    window.onload=function()
+    {
+        if(auth =="客服")
+        {
+            var n = document.getElementsByClassName("auth").length;
+            for(var i=0;i<n;i++)
+            {
+                document.getElementsByClassName("auth")[i].style.display="none";
+            }
+        }
+    }
+</SCRIPT>
+
+

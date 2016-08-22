@@ -1,0 +1,693 @@
+﻿        body
+        {
+            margin:0;
+            padding:0;
+            font-family: "微软雅黑","华文细黑","STHeiti","Hiragino Sans GB","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+            background-color: #eff0f4;
+        }
+        div
+        {
+            padding:0;
+            margin:0;
+        }
+        input
+        {
+            margin:0;
+            padding:0;
+            outline:none;
+            border:none;
+        }
+        li
+        {
+            list-style-type: none;
+        }   
+        td,th
+        {
+            /*width:20%;*/
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-width: 1px;
+            border-top-color: #eff0f4;
+        }
+        .head-title
+        {
+            width: 32%;
+            display: table;
+            height: 45px;
+            float: left;
+        }
+        .head-title div
+        {
+            display: table-cell;
+            font-size: 24px;
+            font-weight: 600;
+            vertical-align: middle;
+            text-align: center;
+            color: rgb(109,197,163);
+        }
+        .fix-info-block
+        {
+            width: 100%;
+        }
+        .black
+        {
+            width: 100%;
+            height: auto;
+            min-height: 150%;
+            position: absolute;
+            background: rgba(0,0,0,0.4);
+            z-index: 1000;
+            display: none;
+        }
+        .black .fix-record
+        {
+            margin-top: 100px;
+            width: 70%;
+            margin-left: 15%;
+            margin-bottom: 15%;
+            
+        }
+        #close
+        {
+            width:25px;
+            float:right;
+            margin-right: 10px;
+            margin-top: -5px;
+        }
+        .fix-record .fix-record-head
+        {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(109,197,163);
+            display: table;
+        }
+        .fix-record-head .fix-record-row p
+        {
+            color: white;
+            font-weight: 500;
+
+        }
+        .fix-record-row
+        {
+            width: 100%;
+            text-align: center;
+            display: table-cell;
+        }
+        .fix-record-body
+        {
+            width: 100%;
+            height: auto;
+            background-color: white;
+            text-align: center;
+            display: table;
+            position: relative;
+        }
+        .fix-record-input-text
+        {
+            float: left;
+            width: 60%;
+            margin-left: 20%;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .fix-record-body .fix-record-input
+        {
+            width: 100%;
+            padding: 10px 0;
+
+        }
+        .fix-record-body input[type="text"]
+        {
+            width: 60%;
+            border: 1px solid rgb(109,197,163);
+            padding: 5px 0px;
+            padding-left: 5px;
+        }
+        .fix-record-input-radio
+        {
+            display: block;
+            text-align: left;
+            width: 60%;
+            margin-left: 20%;
+        }
+        .fix-record-body input[type="radio"]
+        {
+
+            width: 20px;
+        }
+        .fix-record-button
+        {
+            width: 100%;
+            text-align: center;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .fix-record-button span
+        {
+            padding: 8px 20px;
+
+            background-color: white;
+            color: rgb(109,197,163);
+            border: 1px solid rgb(109,197,163);
+        }
+        .fix-record-button span:hover
+        {
+            padding: 8px 20px;
+            background-color: rgb(109,197,163);
+            
+
+            color: white;
+            border: 1px solid rgb(109,197,163);
+        }
+        .left-bar
+        {
+            height:100%;
+            width:50px;
+            position: fixed;
+            background-color: rgb(66,79,99);
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        .menu-icon
+        {
+            float:right;
+            margin-top:7px;
+            margin-right:9px;
+        }
+        .item-list
+        {
+            margin-top:45px;
+            height:100%;
+            width:inherit;
+            background-color: rgb(66,79,99);
+        }
+        .item
+        {
+            padding-left: 10px;
+            color: #fff;
+            font-size: 18px;
+            vertical-align: middle;
+            background-color: rgb(66,79,99);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 100%;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .item:hover
+        {
+        	color: rgb(109,197,163);
+            animation:item-change 1s;
+            background-color: rgb(53,63,79);
+        }
+        @keyframes item-change
+        {
+            from {background-color:rgb(66,79,99);}
+            to {background-color:rgb(53,63,79);}
+        }
+        .content
+        {
+            /*min-height: 150%;*/
+            left:50px;
+            background-color: #eff0f4;
+            top: 0;
+            position: absolute;
+            right: 0;
+            color:gray;
+        }
+        .head
+        {
+            height: 45px;
+            width: inherit;
+            background-color: #fff;
+        }
+        .showing
+        {
+            top: 45px;
+            position: fixed;
+            padding-top: 20px;
+            padding-left: 20px;
+            font-size: 24px;
+        }
+        .search-box
+        {
+            width:250px;
+            margin-left: 10%;
+            background-color: inherit;
+            margin-top: 10px;
+        }
+        .input-box
+        {
+            color:gray;
+            width:200px;
+            font-size: 16px;
+            margin-top:8px;
+            padding-top:5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            background-color: white;
+            border-style: none;
+            border: 1px solid rgb(200,200,200);
+            border-radius: 	5px;
+        }
+        .input-box:focus{
+        	border-color: rgb(109,197,163);
+        	outline: none;
+        }
+        .button
+        {
+            margin-top: 8px;
+            float: right;
+            color:white;
+            background-color: rgb(200,200,200);
+            border-radius: 5px;
+            height:30px;
+            text-align: center;
+            font-size: 15px;
+            vertical-align: middle;
+            padding-top: 2px;
+            border: none;
+        }
+        .button:hover{
+        	background-color: rgb(109,197,163);
+        }
+        .log-info-box{
+        	width: 20%;
+        	height: 45px;
+        	float: right;
+        	background-color: #fff;
+        	display: table;
+        }
+        /*.log-info-box:hover{
+        	background-color: rgb(66,79,99);
+        }*/
+        .log-info-text{
+        	display: table-cell;
+        	vertical-align: middle;
+        	margin: 0;
+        	color: black;
+        	text-align: center;
+        	font-style: italic;
+        }
+        .down{
+        	display: inline-block;
+        	margin-left: 5px;
+        	border-left: 8px solid transparent;
+        	border-right: 8px solid transparent;
+        	border-top: 10px solid rgb(66,79,99);
+        }
+        /*.log-info-box:hover .down{
+        	border-top: 10px solid #fff;
+        }*/
+        /*.log-info-box:hover .log-info-text{
+        	color: #fff;
+        }*/
+        .triangle{
+        	width: 0;
+        	height: 0;
+        	border-top: 0;
+        	border-left: 8px solid transparent;
+        	border-right: 8px solid transparent;
+        	border-bottom: 16px solid rgb(109,197,163);
+        	display: none;
+        	position: fixed;
+        	right: 10px;
+            z-index: 101;
+        }
+        .info-menu{
+        	width: 30%;
+        	height: 300px;
+        	float: right;
+        	position: absolute;
+        	right: 0;
+        	top: 45px;
+        	display: none;
+            box-shadow: #666 0px 0px 10px;
+            z-index: 100;
+        }
+        .info-menu-top{
+        	width: 100%;
+        	height: 60%;
+        	display: table;
+        	background-color: rgb(109,197,163);
+        }
+        .info-menu-line
+        {
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+        } 
+        .info-menu-line div
+        {
+            width: 30%;
+            max-width: 80px;
+            min-width: 50px;
+            margin: 0 auto;
+        }
+        .info-menu-line div img
+        {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .info-menu-line div p
+        {
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 500;
+            color: white;
+            text-align: center;
+        }
+        .info-menu-middle{
+        	width: 100%;
+        	height: 20%;
+        	display: table;
+        	background-color: #fff;
+        }
+        .info-sign
+        {
+            text-align: center;
+            color: gray;
+            font-weight: 500;
+            font-style: italic;
+        }
+        .info-menu-bottom{
+        	width: 100%;
+        	height: 20%;
+        	display: table;
+        	background-color: #fff;
+        }
+        .info-menu-line .info-btn
+        {
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 40%;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+
+        /*to-do-list开始*/
+        .to-do-box
+        {
+            width:28%;
+            background-color: white;
+            margin-top: 20px;
+            margin-right: 50%;
+            float: right;
+            border-radius: 5px;
+        }
+        .to-do-head
+        {
+            width: 100%;
+            height:40px;
+            padding-left: 10px;
+            padding-top: 13px;
+            padding-bottom: 3px;
+            display: table;
+        }
+        .show-todo
+        {
+            height:32px;
+            float:right;
+            display: inline;
+            width:32px;
+            background-color: rgb(200,200,200);
+            margin-top: -1px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .to-do-body
+        {
+            height: 100%;
+        }
+        .to-do
+        {
+            width: 100%;
+            height:40px;
+            display: table;
+            border-top-style: solid;
+            border-top-width: 1px;
+            border-top-color: #eff0f4;
+        }
+        .to-do-row
+        {
+            display: table-cell;
+            vertical-align: middle;
+            width: 90%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        .down-img
+        {
+            width: 15px;
+            float: right;
+            margin-right: 10px;
+        }
+        .to-do-input
+        {
+            font-size: 18px;
+            padding-left: 10px;
+            padding-top:5px;
+            padding-bottom: 5px;
+            border-radius:5px;
+            border-style: solid;
+            border-color: rgb(200,200,200);
+            border-width:1px;
+            width:80%;
+        }
+        .add-btn
+        {       
+            float:right;
+            display: inline;
+            background-color: rgb(66,79,99);
+            padding: 8px;
+            border-radius: 5px;
+            color:white;
+            text-align: center;
+        }
+        .add-btn img{
+            width: 15px;
+        }
+        .delete
+        {
+            float: right;
+            width:18px;
+            display: inline;
+        }
+        /*end of to-do-list*/
+        
+        /*时间和日期，后续装逼*/
+        .time-date
+        {
+            font-size: 24px;
+            width:250px;
+            color:gray;
+            height:45px;
+            padding-top: 15px;
+            margin-left: 50px;
+            display: inline;
+        }
+
+        /*start of 表格*/
+        .table-area
+        {
+            width: 80%;
+            background-color: white;
+            margin-top: 20px;
+            margin-left: 10%;
+            border-radius: 5px;
+        }
+        .table-head
+        {
+            width: 100%;
+            height:40px;
+            display: table;
+        }
+        .table-head-txt
+        {
+            display:table-cell;
+            vertical-align:middle;
+            padding-left: 10px;
+        }
+        .table-body
+        {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+        .width-inh
+        {
+            width:inherit;
+        }
+        .width-inh th
+        {
+            padding: 5px 0px;
+        }
+        .width-inh td
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .width-inh a
+        {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .table-bottom
+        {
+            padding-left: 10px;
+            height: 40px;
+            width:inherit;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: #eff0f4;   
+            display: table;     
+        }
+        .pageup
+        {
+            width:24px;
+            height:24px;
+            margin-top: 8px;
+            float:left;
+            height:24px;
+            color: rgb(53,63,79);
+        }
+        .pagedn
+        {
+            width:24px;
+            height:24px;
+            margin-top: 8px;
+            float:left;
+            height:24px;
+            color: rgb(53,63,79);
+        }
+        .pages-on
+        {
+            width:24px;
+            height:24px;
+            margin-top: 8px;
+            float:left;
+            height:24px;
+            color: rgb(53,63,79);
+        }
+        .pages-off
+        {
+            width:24px;
+            height:24px;
+            margin-top: 8px;
+            float:left;
+            height:24px; 
+            color: rgb(200,200,200); 
+        }
+        .item-on
+        {
+            color: rgb(109,197,163);
+            background-color: rgb(53,63,79);
+        }
+        .width-inh .td a
+        {
+
+            color: rgb(109,197,163);
+        }
+        #add-record
+        {
+            display: none;
+        }
+        .warn-bg
+        {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            position: fixed;
+            z-index: 2500;
+            display: none;
+        }
+        .submit-warn
+        {
+            width: 30%;
+            margin-left: 35%;
+            height: auto;
+            margin-top: 150px;
+            z-index: 2500;
+            position: fixed;
+        }
+        .submit-warn .submit-warn-text
+        {
+            color: black;
+            font-size: 22px;
+            text-align: center;
+            padding: 20px 0px;
+            background-color: white;
+        }
+        .submit-warn .submit-warn-btn
+        {
+            cursor: pointer;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(109,197,163);
+        }
+        .sum-status
+        {
+            width: 80%;
+            margin-left: 10%;
+            text-align: left;
+        }
+        .reduce-message
+        {
+            width: 30%;
+            min-width: 200px;
+            padding: 20px 0;
+            background-color: #FF6347;
+            border-radius: 5px; 
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        .message-table
+        {
+            /*width: 80%;
+            margin-left: 10%;*/
+            margin-bottom: 200px;
+        }
+        .reduce-message .message-title
+        {
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .reduce-message .message-text
+        {
+            width: 100%;
+            padding: 10px 0;
+            text-align: left;
+            color: white;
+            font-size: 16px;
+        }
+        .reduce-message .message-text p
+        {
+            width: 70%;
+            margin-left: 15%;
+            text-align: center;
+        }
+        .reduce-message .message-num
+        {
+            padding: 1px 10px;
+            font-weight: 600;
+            border-radius: 8px;
+            color: #FF6347;
+            background-color: white;
+        }
+        #message-table
+        {
+            display: none;
+        }

@@ -1,0 +1,132 @@
+a
+{
+	cursor: pointer;
+	color: rgb(109,197,163);
+}
+.list-area
+{
+	width: 70%;
+	margin-left: 15%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.text .list-area table
+{
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+.text .list-area td,.text .list-area th
+{
+	width: 25%;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.text .table-row
+{
+	height: 40px;
+}
+.confirm-delete
+{
+	width: 40%;
+	margin-left: 30%;
+	margin-top: 150px;
+	display: none;
+}
+.confirm-delete div
+{
+	width: 100%;
+	text-align: center;
+	background-color: white;
+}
+.confirm-delete div p
+{
+	font-size: 22px;
+	padding: 40px 0;
+	margin: 0;
+}
+.confirm-delete .delete-btn
+{
+	width: 100%;
+}
+.delete-btn .delete-ok
+{
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding: 10px 0;
+	color: white;
+	background-color: #FF6347;
+	cursor: pointer;
+}
+.delete-btn .delete-cancel
+{
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding: 10px 0;
+	background-color: #CDC9C9;
+	cursor: pointer;
+}
+.change-num
+{
+	width: 40%;
+	margin-left: 30%;
+	background-color: white;
+	display: none;
+	margin-top: 5%;
+}
+.change-text
+{
+	text-align: center;
+	font-weight: 500;
+	padding: 20px 0;
+}
+.change-text p
+{
+	width: 80%;
+	margin-left: 10%;
+	text-align: left;
+	font-weight: 500;
+}
+.change-text input
+{
+	outline: none;
+	border: 1px solid rgb(109,197,163);
+	width: 80%;
+	padding: 5px;
+}
+.change-btn
+{
+	width: 100%;
+}
+.change-ok
+{
+	width: 50%;
+	padding: 8px 0;
+	float: left;
+	background-color: #FF6347;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+.change-cancel
+{
+	width: 50%;
+	padding: 8px 0;
+	float: left;
+	background-color: #CDC9C9;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+/*.fix-record
+{
+	display: none;
+}*/
+.width-inh .td a
+{
+
+    color: rgb(109,197,163);
+}

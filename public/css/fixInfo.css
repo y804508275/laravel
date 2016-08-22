@@ -1,0 +1,25 @@
+.text{
+	width: 80%;
+	margin-left: 10%;
+	text-align: left;
+}
+.fix-info-submit{
+	width: 20%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 8px 0;
+	background: white;
+	border: 1px solid rgb(109,197,163);
+	color: rgb(109,197,163);
+	margin-bottom: 10px;
+}
+.fix-info-submit:hover{
+	width: 20%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 8px 0;
+	background: rgb(109,197,163);
+	border: 1px solid rgb(109,197,163);
+	color: white;
+	margin-bottom: 10px;
+}

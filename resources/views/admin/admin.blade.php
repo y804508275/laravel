@@ -26,11 +26,11 @@
     </div>
     <div class="container">
         <div class="row">
-            <h3><a href='/admin/activity' target="_blank">活动管理</a></h3>
+            <h3><a href='/admin/activityAdmin' target="_blank">活动管理</a></h3>
             <h3><a href='/admin/banner' target="_blank">首页管理</a></h3>
             <h3><a href='/admin/city' target="_blank">城市管理</a></h3>
-            <h3><a href='/admin/theme' target="_blank">活动主题管理</a></h3>
             <h3><a href='/admin/topic' target="_blank">话题管理</a></h3>
+            <h3><a href='/admin/article' target="_blank">文章管理</a></h3>
         </div>
     </div>
 

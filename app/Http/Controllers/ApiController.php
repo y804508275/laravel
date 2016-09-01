@@ -24,9 +24,9 @@ class ApiController extends Controller
         $city = DB::table('cities')->get();
 
 
-        $wuhan = array('cityName' => '武汉', 'cityTitle' => '','imageUrl' => 'http://localhost:8000/upload/images/wuhan.jpg');
+        $wuhan = array('cityName' => '武汉', 'cityTitle' => '','imageUrl' => 'http://123.207.101.166/upload/images/wuhan.jpg');
         $cityRes[0] = $wuhan;
-        $guangzhou = array('cityName' => '广州', 'cityTitle' => '','imageUrl' => 'http://localhost:8000/upload/images/guangzhou.jpg');
+        $guangzhou = array('cityName' => '广州', 'cityTitle' => '','imageUrl' => 'http://123.207.101.166/upload/images/guangzhou.jpg');
         $cityRes[1] = $guangzhou;
 
         $info['city'] = $cityRes;
@@ -133,5 +133,23 @@ class ApiController extends Controller
     {
         $result = DB::table('activities')->where('activityId',$id)->get();
         return view('ios.activity')->with('result',$result);
+    }
+    public function allList($number)
+    {
+        $list = DB::table('activities')->where('show','显示')->orderBy('addTime','desc')->take($number)->get();
+        $re['list'] = $list;
+        $all = DB::table('activities')->where('show','显示')->get();
+        $allNum = count($all);
+        $listNum = count($list);
+        if ($listNum == $allNum)
+        {
+            $ifAll = 'yes';
+        }
+        else
+        {
+            $ifAll = 'no';
+        }
+        $re['all'] = $ifAll;
+        return $re;
     }
 }

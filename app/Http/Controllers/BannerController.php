@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Input;
 
 class BannerController extends Controller
 {
-    private $imgUrl = 'http://localhost:8000/';
+    private $imgUrl = 'http://123.207.101.166/';
     public function index()
     {
         session_start();

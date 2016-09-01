@@ -21,9 +21,12 @@ Route::get('/city/{city}','ShowController@showCity');
 
 Route::get('/activity/{id}','ShowController@activity');
 
+Route::get('/article/{id}','ArticlesController@show');
 //admin
 
 Route::get('/admin', 'AdminController@index');
+
+Route::get('/admin/activityAdmin','ActivityController@index');
 
 Route::get('/admin/activity','ActivityController@activity');
 
@@ -96,6 +99,20 @@ Route::post('/admin/theme/add','ThemeController@addSubmit');
 
 Route::post('/admin/theme/delete','ThemeController@themeDelete');
 
+//admin文章管理
+
+Route::get('/admin/article','ArticlesController@index');
+
+Route::get('/admin/article/add','ArticlesController@add');
+
+Route::post('/admin/article/add','ArticlesController@addSubmit');
+
+Route::get('/admin/article/edit/{id}','ArticlesController@edit');
+
+Route::post('/admin/article/edit','ArticlesController@editSubmit');
+
+Route::post('/admin/article/delete','ArticlesController@del');
+
 //Api
 
 Route::get('/api/main','ApiController@mainApi');
@@ -108,6 +125,17 @@ Route::get('/api/city/{name}','ApiController@city');
 
 Route::get('/api/theme/{themeId}','ApiController@theme');
 
+Route::post('/api/user/signup','UserController@signUp');
+
+Route::post('/api/user/signin','UserController@signIn');
+
+Route::get('/api/list/{number}','ApiController@allList');
+
+Route::get('/api/user/set','UserController@set');
+
+Route::post('/api/ceshi','UserController@ceshi');
+
+Route::get('/api/sms/{tel}','UserController@sms');
 //Route::get('/api/activity/{id}','ApiController@activity');
 
 

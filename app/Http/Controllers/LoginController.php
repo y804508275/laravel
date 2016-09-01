@@ -15,7 +15,6 @@ class LoginController extends Controller
     {
         return view('admin.login');
     }
-
     /**
      * @param Request $request
      */
@@ -24,7 +23,7 @@ class LoginController extends Controller
         $input = $request->all();
         $username = $input['username'];
 
-        $result = DB::table('users')->where('username',$username)->pluck('password');
+        $result = DB::table('admins')->where('username',$username)->pluck('password');
 //        return view('admin.welcome');       
         if ($result != []) {
             if ( $result[0] == $input['password']) {
@@ -44,6 +43,24 @@ class LoginController extends Controller
         
 //        return $request->get('username');
     }
+//    public function signUp(Request $request)
+//    {
+//        $input = $request->all();
+//        $data['telephone'] = $input['telephone'];
+//        $password = $input['password'];
+//        $hash = password_hash($password, PASSWORD_DEFAULT);
+//        $pass = '456';
+//        if (password_verify($pass, $hash)) {
+//            $data['res'] = 'resYes';
+//        }
+//        else {
+//            $data['res'] = 'resNo';
+//        }
+//        $data['password'] = $hash;
+//        $data['checkNum'] = $input['checkNum'];
+//
+//        return $data;
+//    }
     public function welcome()
     {
         return view('admin.welcome');
